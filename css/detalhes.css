@@ -1,0 +1,118 @@
+/* --- 1. Container Principal da Seção de Detalhes --- */
+.detalhes-livro {
+    display: flex;
+    align-items: flex-start; 
+    flex-wrap: wrap; 
+    gap: 2.5rem; 
+
+    /* Estilo do Card */
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(
+        --borda-radius-grande
+    ); 
+    box-shadow: var(--sombra-suave);
+}
+
+/* --- 2. Coluna do Poster (Imagem) --- */
+.detalhes-livro-poster {  
+    flex: 1 1 300px;
+    text-align: center; 
+}
+
+.detalhes-livro-poster img {
+    width: 100%;
+    max-width: 350px; 
+    height: auto;
+    border-radius: var(
+        --borda-radius-grande
+    ); 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); 
+}
+
+/* --- 3. Coluna de Informações (Texto) --- */
+.detalhes-livro-info {
+    flex: 2 1 400px;
+}
+
+.detalhes-livro-info h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--cor-texto);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.detalhes-livro-info p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+}
+
+/* Estilo específico para textos em negrito (etiquetas como "Autor:", "Idioma:") */
+.detalhes-livro-info p b {
+    color: #495057; 
+    font-weight: 500;
+}
+
+/* --- 4. Elementos de Navegação --- */
+.link-voltar {
+    display: inline-block; 
+    margin-top: 2rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--cor-primaria);
+    text-decoration: none;
+    border: 1px solid var(--cor-primaria);
+    border-radius: var(--borda-radius-pequena); 
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.link-voltar:hover {
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+/* --- 5. Seção de Tópicos (Gêneros) --- */
+.topicos-container {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #f0f0f0;     
+    display: flex;
+    flex-wrap: wrap;       
+    align-items: center;   
+    gap: 0.5rem 0.8rem;      
+}
+
+.topicos-container p b {
+    font-size: 1.1rem;      
+    color: #495057;
+    margin-right: 0.5rem;   
+}
+
+.topico-badge {
+    display: inline-block;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    padding: 0.4rem 0.9rem;
+    border-radius: 15px; 
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid var(--cor-borda);
+    white-space: nowrap; 
+    transition: all 0.2s ease;
+}
+
+.topico-badge:hover {
+    background-color: var(--cor-primaria);
+    color: white;
+    border-color: var(--cor-primaria);
+}
+
+.sem-topicos {
+    font-style: italic;
+    color: var(--cor-texto-claro);
+}

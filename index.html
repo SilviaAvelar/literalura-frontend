@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literalura - Catálogo de Livros</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Literalura</h1>
+    </header>
+
+    <main>
+    <!-- 1. SEÇÃO DE BUSCA -->
+    <section id="busca-section">
+        <h2>Buscar e Salvar Novo Livro</h2>
+        <div class="busca-container">
+            <input type="text" id="input-titulo-livro" placeholder="Digite o título do livro...">
+            <button id="btn-buscar-livro">Buscar na API</button>
+        </div>
+        <div id="resultado-busca-container">
+        </div>
+    </section>
+
+    <!-- 3. SEÇÃO DE TODOS OS LIVROS -->
+    <section id="todos-livros-section">
+        <h2>Todos os Livros Registrados</h2>
+        <div class="filtro-container">
+            <label for="select-idioma">Filtrar por idioma:</label>
+            <select id="select-idioma">
+                <option value="todos">Todos os Idiomas</option>
+                <option value="pt">Português (pt)</option>
+                <option value="en">Inglês (en)</option>
+                <option value="es">Espanhol (es)</option>
+                <option value="fr">Francês (fr)</option>
+            </select>
+        </div>
+        <div id="lista-livros-container" class="lista-container">
+            <p class="loading-message">Carregando livros...</p>
+        </div>
+        <div id="livros-pagination-controls" class="pagination-controls"></div>
+    </section>
+
+    <!-- 2. SEÇÃO TOP 10 -->
+    <section id="top10-section">
+        <h2>Top 10 Livros Mais Baixados</h2>
+        <div id="top10-container" class="lista-container">
+            <p class="loading-message">Carregando Top 10...</p>
+        </div>
+    </section>    
+
+    <!-- 4. SEÇÃO DE TODOS OS AUTORES -->
+<section id="todos-autores-section">
+    <h2>Autores Registrados no Catálogo</h2>
+
+    <div class="autores-filtro-container">
+        
+        <!-- Linha do filtro por ano -->
+        <div class="filtro-linha">
+            <label for="input-ano-vivo">Listar autores vivos no ano:</label>
+            <input type="number" id="input-ano-vivo" placeholder="Ex: 1850">
+            <button id="btn-filtrar-autores-ano">Filtrar</button>
+        </div>
+        
+        <!-- Linha do filtro por nome -->
+        <div class="filtro-linha">
+            <label for="input-nome-autor">Buscar autor por nome:</label>
+            <input type="text" id="input-nome-autor" placeholder="Digite parte do nome...">
+            <button id="btn-buscar-autor-nome">Buscar</button>
+        </div>
+
+        <!-- O botão de limpar fica fora das linhas para ter seu próprio alinhamento -->
+        <button id="btn-limpar-filtros-autores" class="btn-limpar">Limpar Filtros</button>
+
+    </div> 
+
+    <!-- Lista e paginação de autores -->
+    <div id="lista-autores-container" class="lista-container">
+        <p class="loading-message">Carregando autores...</p>
+    </div>
+    <div id="autores-pagination-controls" class="pagination-controls"></div>
+
+</section>
+
+    <!-- 5. SEÇÃO DE ESTATÍSTICAS -->
+    <section id="stats-section">
+        <h2>Estatísticas do Catálogo</h2>
+        <div id="stats-container">
+            <p class="loading-message">Carregando estatísticas...</p>
+        </div>
+    </section>
+
+</main>
+
+    <footer>
+        <p>© 2025 Literalura</p>
+    </footer>
+
+    <script src="js/apiService.js" type="module"></script>
+    <script src="js/home.js" type="module"></script>
+</body>
+
+</html>
