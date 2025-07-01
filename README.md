@@ -35,6 +35,7 @@ Este é o **frontend** da aplicação **Literalura**, um catálogo interativo de
 ---
 
 ## 🏗️ Arquitetura do Projeto
+```
 literalura-frontend/
 │
 ├── index.html # Página principal com listagem e buscas
@@ -48,7 +49,7 @@ literalura-frontend/
 │ ├── apiService.js # Serviço central de chamadas à API
 │ ├── home.js # Lógica da página inicial
 │ └── detalhesLivro.js # Lógica da página de detalhes
-
+```
 
 ---
 
@@ -63,10 +64,10 @@ literalura-frontend/
 ## 📸 Preview
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/SilviaAvelar/literalura-front/assets/primeira.png" width="30%" />
-  <img src="https://raw.githubusercontent.com/SilviaAvelar/literalura-front/assets/segunda.png" width="30%" />
-  <img src="https://raw.githubusercontent.com/SilviaAvelar/literalura-front/assets/terceira.png" width="30%" />
-  <img src="https://raw.githubusercontent.com/SilviaAvelar/literalura-front/assets/quarta.png" width="30%" />
+  <img src="https://raw.githubusercontent.com/SilviaAvelar/literalura-front/main/assets/primeira.png" width="30%" />
+  <img src="https://raw.githubusercontent.com/SilviaAvelar/literalura-front/main/assets/segunda.png" width="30%" />
+  <img src="https://raw.githubusercontent.com/SilviaAvelar/literalura-front/main/assets/terceira.png" width="30%" />
+  <img src="https://raw.githubusercontent.com/SilviaAvelar/literalura-front/main/assets/quarta.png" width="30%" />
 </p>
 
 
