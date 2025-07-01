@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:8080/api'; 
+const BASE_URL = 'https://literalura-backend-production.up.railway.app/api';  
 
 export async function getTodosLivros(page = 0, size = 8) {
     try {
