@@ -1,44 +1,90 @@
-📖 Literalura - Frontend
-Este é o frontend da aplicação Literalura, um catálogo interativo de livros desenvolvido para o Challenge de Back-End da Alura. 
-Esta interface consome a API RESTful do Literalura Backend para fornecer uma experiência de usuário rica e dinâmica.
-A aplicação está no ar! Acesse aqui
-![alt text](https://literalura-frontend-git-main-silvia-avelars-projects.vercel.app/assets/images/screenshot.png)
+# 📚 Literalura - Frontend
 
-🚀 Funcionalidades Principais
-Busca de Livros: Pesquise por livros na API do Project Gutenberg e salve-os no catálogo.
-Listagem Completa: Visualize todos os livros e autores já registrados no banco de dados com paginação.
-Filtragem Dinâmica: Filtre livros por idioma e busque autores por nome ou por ano em que estavam vivos.
-Detalhes do Livro: Veja informações detalhadas de cada livro, incluindo capa, número de downloads e tópicos.
-Top 10: Descubra os 10 livros mais populares (com base no número de downloads).
-Estatísticas do Catálogo: Visualize dados agregados sobre a coleção de livros.
+[![Deploy Vercel](https://img.shields.io/badge/deploy-Vercel-black?logo=vercel)](https://literalura-frontend-git-main-silvia-avelars-projects.vercel.app)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)
+![MIT License](https://img.shields.io/badge/license-MIT-green)
 
-🛠️ Tecnologias Utilizadas
-Este projeto foi construído com uma abordagem moderna e modular, utilizando tecnologias web essenciais:
-HTML5: Para a estrutura semântica das páginas.
-CSS3: Para a estilização, com uso de Variáveis CSS para um tema consistente e responsivo.
-JavaScript (ES6+): Para toda a interatividade, manipulação do DOM e lógica de comunicação com a API.
-Fetch API: Para realizar as requisições assíncronas ao backend.
-Design Responsivo: A interface se adapta a diferentes tamanhos de tela, de desktops a dispositivos móveis.
+Este é o **frontend** da aplicação **Literalura**, um catálogo interativo de livros desenvolvido como parte do **Challenge de Back-End da Alura**. A aplicação consome a API RESTful do projeto Literalura Backend e oferece uma experiência rica, moderna e responsiva para os usuários explorarem livros clássicos do *Project Gutenberg*.
 
-🏛️ Arquitetura e Estrutura
-O frontend foi projetado para ser desacoplado do backend, seguindo as melhores práticas de desenvolvimento de APIs:
-index.html: A página principal que exibe as listas de livros, autores e os formulários de busca.
-detalhes_livro.html: Uma página dedicada a mostrar os detalhes de um livro específico.
-css/: Pasta contendo os arquivos de estilo.
-styles.css: Estilos globais, cards e layout principal.
-detalhes.css: Estilos específicos para a página de detalhes.
-js/: Pasta contendo os arquivos JavaScript modulares.
-apiService.js: Centraliza todas as chamadas fetch para a API do backend, tornando o código mais limpo e fácil de manter.
-home.js: Controla toda a lógica da página index.html.
-detalhesLivro.js: Controla a lógica da página detalhes_livro.html.
+🔗 **Acesse o projeto em produção:**  
+👉 [https://literalura-frontend-git-main-silvia-avelars-projects.vercel.app](https://literalura-frontend-git-main-silvia-avelars-projects.vercel.app)
 
-🌐 Deploy
-O frontend está hospedado na Vercel, uma plataforma otimizada para performance e com integração contínua (CI/CD) diretamente do GitHub.
-URL da Aplicação: https://literalura-frontend-git-main-silvia-avelars-projects.vercel.app/
-Backend Consumido: A API REST hospedada no Railway.
+---
 
-✍️ Autora
-Sílvia Avelar
-GitHub: @SilviaAvelar
-LinkedIn: linkedin.com/in/silvia-avelar
-Portfólio: silviaavelar.github.io/Portfolio/
+## 🚀 Funcionalidades
+
+- 🔍 **Busca de Livros:** Pesquise livros diretamente da API do Project Gutenberg e adicione-os ao catálogo.
+- 📚 **Listagem Completa:** Visualize todos os livros e autores cadastrados, com paginação.
+- 🎯 **Filtros Dinâmicos:** Filtre livros por idioma e busque autores por nome ou por período em que estavam vivos.
+- 📖 **Detalhes do Livro:** Veja informações completas do livro, como capa, número de downloads e tópicos.
+- ⭐ **Top 10 Livros:** Descubra os 10 livros mais populares com base em downloads.
+- 📊 **Estatísticas do Catálogo:** Visualize dados agregados sobre os livros salvos.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **HTML5:** Estrutura semântica das páginas.
+- **CSS3:** Estilização com uso de variáveis CSS e design responsivo.
+- **JavaScript (ES6+):** Lógica da aplicação e manipulação do DOM.
+- **Fetch API:** Comunicação assíncrona com o backend.
+- **Vercel:** Deploy contínuo e otimizado a partir do GitHub.
+
+---
+
+## 🏗️ Arquitetura do Projeto
+literalura-frontend/
+│
+├── index.html # Página principal com listagem e buscas
+├── detalhes_livro.html # Página de detalhes de um livro
+│
+├── css/
+│ ├── styles.css # Estilos globais
+│ └── detalhes.css # Estilos específicos para página de detalhes
+│
+├── js/
+│ ├── apiService.js # Serviço central de chamadas à API
+│ ├── home.js # Lógica da página inicial
+│ └── detalhesLivro.js # Lógica da página de detalhes
+
+
+---
+
+## 🌐 Backend Utilizado
+
+- API REST hospedada na **Railway**
+- Desenvolvida durante o Challenge de Back-End da Alura
+- Comunicação totalmente desacoplada entre frontend e backend
+
+---
+
+## 📸 Preview
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/SilviaAvelar/literalura-front/main/assets/primeira.png" width="30%" />
+  <img src="https://raw.githubusercontent.com/SilviaAvelar/literalura-front/main/assets/segunda.png" width="30%" />
+  <img src="https://raw.githubusercontent.com/SilviaAvelar/literalura-front/main/assets/terceira.png" width="30%" />
+  <img src="https://raw.githubusercontent.com/SilviaAvelar/literalura-front/main/assets/quarta.png" width="30%" />
+</p>
+
+
+---
+
+## 👩‍💻 Autora
+
+Feito com 💙 por **Sílvia Avelar**
+
+- 🌐 [Portfólio](https://silviaavelar.github.io/Portfolio/)
+- 💼 [LinkedIn](https://www.linkedin.com/in/silvia-avelar)
+- 🖥️ [GitHub](https://github.com/SilviaAvelar)
+
+---
+
+## 📄 Licença
+
+Este projeto está licenciado sob a **MIT License**.  
+Sinta-se à vontade para contribuir ou adaptar!
+
+---
