@@ -64,10 +64,10 @@ literalura-frontend/
 ## 📸 Preview
 
 <p align="center">
-  <img src="./assets/primeira.png" width="50%" />
-  <img src="./assets/segunda.png" width="50%" />
-  <img src="./assets/terceira.png" width="50%" />
-  <img src="./assets/quarta.png" width="50%" />
+  <img src="./assets/primeira.png" width="40%" />
+  <img src="./assets/segunda.png" width="40%" />
+  <img src="./assets/terceira.png" width="40%" />
+  <img src="./assets/quarta.png" width="40%" />
 </p>
 
 ---
