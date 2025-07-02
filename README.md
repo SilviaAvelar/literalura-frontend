@@ -55,9 +55,12 @@ literalura-frontend/
 
 ## 🌐 Backend Utilizado
 
-- API REST hospedada na **Railway**
-- Desenvolvida durante o Challenge de Back-End da Alura
-- Comunicação totalmente desacoplada entre frontend e backend
+Esta aplicação consome uma API REST desenvolvida especificamente para o projeto Literalura.
+
+- **Tecnologias:** Java 17, Spring Boot 3 e PostgreSQL.
+- **Hospedagem:** API hospedada na plataforma **Railway**.
+- **Repositório do Backend:** [**Acesse o código-fonte da API aqui**](https://github.com/SilviaAvelar/literalura-backend).
+- **Arquitetura:** Comunicação totalmente desacoplada entre frontend e backend.
 
 ---
 
