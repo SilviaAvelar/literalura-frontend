@@ -355,3 +355,32 @@ button:disabled {
         align-items: stretch;
     }
 }
+
+/* Estilos para as mensagens de feedback */
+
+.loading-message {
+    color: #555;
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
+}
+
+.error-message {
+    color: #D8000C;
+    background-color: #FFD2D2;
+    border: 1px solid #D8000C;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.success-message {
+    color: #270;
+    background-color: #DFF2BF;
+    border: 1px solid #270;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-align: center;
+}

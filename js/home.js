@@ -58,7 +58,7 @@ function criarCardLivro(livro) {
 
 function criarCardAutor(autor) {
     const card = document.createElement('div');
-    card.className = 'card-autor'; 
+    card.className = 'card-autor';
     card.innerHTML = `
         <h3>${autor.nome}</h3>
         <p><b>Nascimento:</b> ${autor.anoNascimento || 'N/A'}</p>
@@ -68,7 +68,7 @@ function criarCardAutor(autor) {
 }
 
 function renderizarLista(container, dados, criarCardFn, mensagemSemDados) {
-    container.innerHTML = ''; 
+    container.innerHTML = '';
     if (dados && dados.length > 0) {
         dados.forEach(item => container.appendChild(criarCardFn(item)));
     } else {
@@ -78,7 +78,7 @@ function renderizarLista(container, dados, criarCardFn, mensagemSemDados) {
 
 function renderizarPaginacao(container, pageObject, onPageChange) {
     container.innerHTML = '';
-    if (!pageObject || pageObject.totalPages <= 1) return; 
+    if (!pageObject || pageObject.totalPages <= 1) return;
 
     const pageInfo = document.createElement('span');
     pageInfo.textContent = `Página ${pageObject.number + 1} de ${pageObject.totalPages}`;
@@ -146,18 +146,18 @@ document.addEventListener('DOMContentLoaded', () => {
         listaAutoresContainer.innerHTML = '<p class="loading-message">Carregando autores...</p>';
         autoresPaginationContainer.innerHTML = '';
         try {
-        let pagina;
-        const tipo = estado.autores.tipoFiltro;
-        const valor = estado.autores.valorFiltro;
-        const page = estado.autores.currentPage;
+            let pagina;
+            const tipo = estado.autores.tipoFiltro;
+            const valor = estado.autores.valorFiltro;
+            const page = estado.autores.currentPage;
 
-        if (tipo === 'ano') {
-            pagina = await getAutoresVivosEmAno(valor, page, TAMANHO_PAGINA_AUTORES); 
-        } else if (tipo === 'nome') {
-            pagina = await getAutoresPorNome(valor, page, TAMANHO_PAGINA_AUTORES); 
-        } else { // 'todos'
-            pagina = await getTodosAutores(page, TAMANHO_PAGINA_AUTORES); 
-        }
+            if (tipo === 'ano') {
+                pagina = await getAutoresVivosEmAno(valor, page, TAMANHO_PAGINA_AUTORES);
+            } else if (tipo === 'nome') {
+                pagina = await getAutoresPorNome(valor, page, TAMANHO_PAGINA_AUTORES);
+            } else {
+                pagina = await getTodosAutores(page, TAMANHO_PAGINA_AUTORES);
+            }
 
             renderizarLista(listaAutoresContainer, pagina.content, criarCardAutor, 'Nenhum autor encontrado.');
             renderizarPaginacao(autoresPaginationContainer, pagina, (newPage) => {
@@ -204,19 +204,35 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 4. LÓGICA DE EVENTOS (Ações do usuário que mudam o 'estado' e recarregam os dados) ---
     btnBuscarLivro.addEventListener('click', async () => {
         const titulo = inputTituloLivro.value.trim();
-        if (!titulo) return;
+        if (!titulo) {
+            resultadoBuscaContainer.innerHTML = `<p class="error-message">Por favor, digite um título.</p>`;
+            return;
+        }
+
         btnBuscarLivro.disabled = true;
         btnBuscarLivro.textContent = 'Buscando...';
         resultadoBuscaContainer.innerHTML = '<p class="loading-message">Buscando na API...</p>';
+
         try {
             const livroProcessado = await buscarESalvarLivroPorTitulo(titulo);
+
             if (livroProcessado) {
                 resultadoBuscaContainer.innerHTML = '<h4>Livro encontrado e salvo/atualizado:</h4>';
                 const gridContainer = document.createElement('div');
-                gridContainer.className = 'lista-container'; 
+                gridContainer.className = 'lista-container';
                 gridContainer.appendChild(criarCardLivro(livroProcessado));
                 resultadoBuscaContainer.appendChild(gridContainer);
+
+                carregarLivros();
+
+            } else {
+                resultadoBuscaContainer.innerHTML = `<p class="error-message">Livro não encontrado. Verifique o título e tente novamente.</p>`;
             }
+
+        } catch (error) {
+            console.error("Falha na busca do livro:", error);
+            resultadoBuscaContainer.innerHTML = `<p class="error-message">Ocorreu um erro de comunicação. Tente mais tarde.</p>`;
+
         } finally {
             btnBuscarLivro.disabled = false;
             btnBuscarLivro.textContent = 'Buscar na API';
