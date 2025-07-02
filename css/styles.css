@@ -358,7 +358,9 @@ button:disabled {
 
 /* Estilos para as mensagens de feedback */
 
-.loading-message {
+/* Estilos para as mensagens de feedback */
+
+.loading-message, .info-message {
     color: #555;
     font-style: italic;
     text-align: center;
@@ -369,16 +371,6 @@ button:disabled {
     color: #D8000C;
     background-color: #FFD2D2;
     border: 1px solid #D8000C;
-    padding: 15px;
-    border-radius: 5px;
-    margin-top: 15px;
-    text-align: center;
-}
-
-.success-message {
-    color: #270;
-    background-color: #DFF2BF;
-    border: 1px solid #270;
     padding: 15px;
     border-radius: 5px;
     margin-top: 15px;
